@@ -1,1 +1,47 @@
-Aeeeeee!!!!!
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<title>Blog</title>
+	<!-- css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+		<!-- Just an image -->
+		  <nav class="navbar navbar-light bg-light">
+		    <span class="navbar-brand mb-0 h1" style="font-weight:bold;" >MvsBlog</span>
+         </nav>    
+    </header>     
+    <section>
+         	<div class = "Container" style="margin-left:20%; width:60%; padding-bottom:30px;" >
+         	
+         		<nav aria-label="breadcrumb">
+  				  <ol class="breadcrumb" style=" background-color:white; padding-left:0px;">
+   					 <li class="breadcrumb-item" aria-current="page"><a href="/posts">Posts</a></li>
+   					 <li class="breadcrumb-item active" aria-current="page">Posts</li>
+  				  </ol>
+				</nav>
+				<div>
+				  <form  method="post">
+				      <div class="form-group">
+				      	<input type="text" class="form-control" name="titulo" placeholder="Titulo *">
+				      </div>
+				      
+				       <div  class="form-group">
+				      	<input type="text" class="form-control" name="autor" placeholder="Autor *">
+				      </div>
+				      
+				      <textarea  type="text" class="form-control" name="texto" placeholder="Texto *"></textarea>
+				      <small class="form-text text-muted">(*) Campos obrigatórios</small>
+				      
+				      <button type="submit" class="btn btn-primary" style="margin-top:10px;"><a href="/newpost">Publicar</a></button>
+				      <a href="/posts" class="btn btn-light" role="button" style="margin-top:10px;" >Cancelar</a>
+				     <!--  <button type="submit" class="btn" style="margin-top:10px;">Cancelar</button>  -->
+				  </form>
+				</div>	
+         	</div>
+    </section>
+         
+	
+</body>
+</html>
