@@ -11,7 +11,11 @@
 		  <nav class="navbar navbar-light bg-light">
 		    <span class="navbar-brand mb-0 h1" style="font-weight:bold;" >MvsBlog</span>
             </a>
+            <button type="button" class="btn btn-info"><a href="/newpost"> New Post </a></button>
+            
          </nav>
+         
+         
     </header>     
          <section>
          	<div class = "Container" style="margin-left:20%; width:60%; padding-bottom:30px;" >
@@ -31,12 +35,10 @@
   						
   						</p>
  
-  						<a href="#"><h4 claclass="card-title" style="font-weight: bold; color: black; padding-top: 5px;"><span th:text="${post.titulo}" ></span> </h4></a>
+  						<a th:href="${(#mvc.url('BC#getPostDetails').arg(0, post.id)).build()}"><h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;"><span th:text="${post.titulo}"></span> </h4></a>
   						
   						<p class="card-text"><span th:utext="${#strings.abbreviate(post.texto,400)}"></span></p>
- 
-  						
-  						
+	
   					</div>
 				</div>
          	</div>
