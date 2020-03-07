@@ -54,4 +54,5 @@ public class BlogController {
 		blogservice.save(post);
 		return "redirect/posts";
 	}
+
 }
