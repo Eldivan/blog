@@ -2,6 +2,7 @@ package com.spring.blog.controller;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.validation.Valid;
 
@@ -46,13 +47,14 @@ public class BlogController {
 	}
 	
 	@RequestMapping(value = "/newpost", method = RequestMethod.POST)
-	public String savePost(@Valid Post post, BindingResult  result, RedirectAttributes attributes) {
+	public String savePost(@Valid Post post, BindingResult result, RedirectAttributes attributes) {
 		if (result.hasErrors()) {
-			return "redirect/newpost";
+			attributes.addFlashAttribute("mensagem", "Campos obrigatórios devem ser preenchidos");
+			return "redirect:/newpost";
 		}
 		post.setData(LocalDate.now());
 		blogservice.save(post);
-		return "redirect/posts";
+		return "redirect:/posts";
 	}
 
 }
